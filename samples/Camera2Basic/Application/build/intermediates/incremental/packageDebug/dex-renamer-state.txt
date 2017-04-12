@@ -1,7 +1,0 @@
-#Sun Apr 09 16:25:28 EDT 2017
-base.0=/Users/liaohaofu/Courses/human_computer_interaction/project/samples/Camera2Basic/Application/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_fe916be2f37d9ebfb1f9797e606fd7104f9634ee
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=/Users/liaohaofu/Courses/human_computer_interaction/project/samples/Camera2Basic/Application/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_e6d83fcec97ffc5c805244f1ab8d135e21ee2fe0/classes.dex
-base.1=/Users/liaohaofu/Courses/human_computer_interaction/project/samples/Camera2Basic/Application/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_e6d83fcec97ffc5c805244f1ab8d135e21ee2fe0
-file.0=/Users/liaohaofu/Courses/human_computer_interaction/project/samples/Camera2Basic/Application/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_fe916be2f37d9ebfb1f9797e606fd7104f9634ee/classes.dex
