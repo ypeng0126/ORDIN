@@ -11,6 +11,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.getMenu().getItem(0).setChecked(true);
-        getSupportActionBar().setTitle(R.string.title_manage);
+        getSupportActionBar().setTitle(Html.fromHtml("<font color=#757575>Mange Faces</font>"));
         FragmentManager mFragmentManager = getFragmentManager();
         FragmentTransaction mFragmentTransaction = mFragmentManager
                 .beginTransaction();
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity
             // Replace whatever is in the content view with this fragment,
             // and add the transaction to the back stack so the user can navigate back
             mFragmentTransaction.replace(R.id.container_main, newFrag);
-            mFragmentTransaction.addToBackStack(null);
+//            mFragmentTransaction.addToBackStack(null);
 
             // Commit the transaction
             mFragmentTransaction.commit();
@@ -77,45 +78,36 @@ public class MainActivity extends AppCompatActivity
         FragmentManager mFragmentManager = getFragmentManager();
         FragmentTransaction mFragmentTransaction = mFragmentManager
                 .beginTransaction();
-        Fragment currentFrag = mFragmentManager.findFragmentById(R.id.container_main);
 
         if (id == R.id.nav_manage) {
-            getSupportActionBar().setTitle(R.string.title_manage);
-            if (currentFrag == null|| !(currentFrag instanceof ManageFragment)) {
-                ManageFragment newFrag = new ManageFragment();
+            getSupportActionBar().setTitle(Html.fromHtml("<font color=#757575>Mange Faces</font>"));
+            ManageFragment newFrag = new ManageFragment();
 
-                // Replace whatever is in the content view with this fragment,
-                // and add the transaction to the back stack so the user can navigate back
-                mFragmentTransaction.replace(R.id.container_main, newFrag);
-                mFragmentTransaction.addToBackStack(null);
+            // Replace whatever is in the content view with this fragment,
+            // and add the transaction to the back stack so the user can navigate back
+            mFragmentTransaction.replace(R.id.container_main, newFrag);
 
-                // Commit the transaction
-                mFragmentTransaction.commit();
-            }
+            // Commit the transaction
+            mFragmentTransaction.commit();
         } else if (id == R.id.nav_register) {
-            getSupportActionBar().setTitle(R.string.title_register);
-            if (currentFrag == null || !(currentFrag instanceof CameraFragment)) {
-                CameraFragment newFrag = new CameraFragment();
+            getSupportActionBar().setTitle(Html.fromHtml("<font color=#757575>Register Face</font>"));
+            CameraFragment newFrag = new CameraFragment();
 
-                // Replace whatever is in the content view with this fragment,
-                // and add the transaction to the back stack so the user can navigate back
-                mFragmentTransaction.replace(R.id.container_main, newFrag);
-                mFragmentTransaction.addToBackStack(null);
+            // Replace whatever is in the content view with this fragment,
+            // and add the transaction to the back stack so the user can navigate back
+            mFragmentTransaction.replace(R.id.container_main, newFrag);
 
-                // Commit the transaction
-                mFragmentTransaction.commit();
-            }
+            // Commit the transaction
+            mFragmentTransaction.commit();
+
         } else if (id == R.id.nav_settings) {
-            getSupportActionBar().setTitle(R.string.title_settings);
+            getSupportActionBar().setTitle(Html.fromHtml("<font color=#757575>Settings</font>"));
             // Create a new fragment only when no setting fragment exists
-            if (currentFrag == null || !(currentFrag instanceof SettingsFragment)) {
-                SettingsFragment newFragment = new SettingsFragment();
+            SettingsFragment newFragment = new SettingsFragment();
 
-                mFragmentTransaction.replace(R.id.container_main, newFragment);
-                mFragmentTransaction.addToBackStack(null);
+            mFragmentTransaction.replace(R.id.container_main, newFragment);
 
-                mFragmentTransaction.commit();
-            }
+            mFragmentTransaction.commit();
         } else if (id == R.id.nav_sign_out) {
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);

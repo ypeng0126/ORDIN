@@ -34,17 +34,15 @@ public class CameraFragment extends Fragment {
         FragmentManager mFragmentManager = getFragmentManager();
         FragmentTransaction mFragmentTransaction = mFragmentManager
                 .beginTransaction();
-        Fragment currentFrag = mFragmentManager.findFragmentById(R.id.camera_container);
-        if (currentFrag == null || !(currentFrag instanceof Camera2BasicFragment)) {
-            Camera2BasicFragment newFrag = Camera2BasicFragment.newInstance();
 
-            // Replace whatever is in the content view with this fragment,
-            // and add the transaction to the back stack so the user can navigate back
-            mFragmentTransaction.replace(R.id.camera_container, newFrag);
+        Camera2BasicFragment newFrag = Camera2BasicFragment.newInstance();
 
-            // Commit the transaction
-            mFragmentTransaction.commit();
-        }
+        // Replace whatever is in the content view with this fragment,
+        // and add the transaction to the back stack so the user can navigate back
+        mFragmentTransaction.replace(R.id.camera_container, newFrag);
+
+        // Commit the transaction
+        mFragmentTransaction.commit();
     }
 
 }

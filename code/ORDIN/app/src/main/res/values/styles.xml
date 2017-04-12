@@ -1,0 +1,40 @@
+<resources>
+
+    <!-- Theme for main activity -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/ordin_white</item>
+        <item name="android:textColor">@color/ordin_gray</item>
+        <item name="android:textSize">@dimen/ordin_text_size</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    </style>
+
+    <!-- Set the color of the drawer arrow -->
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/ordin_blue</item>
+    </style>
+
+    <!-- Set the size of drawer item text size -->
+    <style name="DrawerStyle" >
+        <item name="android:textSize">@dimen/ordin_text_size</item>
+    </style>
+
+    <!-- Theme for login activity -->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textColorHint">@color/ordin_white</item>
+        <item name="android:colorControlActivated">@color/ordin_white</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- Set the color of input indicator -->
+    <style name="TextAppearance.App.TextInputLayout" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/ordin_white</item>
+    </style>
+
+</resources>
